@@ -40,17 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 const encodedEmail = encodeURIComponent(email);
                 return `
                   <li class="participant-item">
-                    <span class="participant-email">${email}</span>
-                    <button
-                      type="button"
-                      class="participant-delete-btn"
-                      data-activity="${encodedActivityName}"
-                      data-email="${encodedEmail}"
-                      title="Unregister participant"
-                      aria-label="Unregister participant"
-                    >
-                      <span class="delete-icon" aria-hidden="true">&#128465;</span>
-                    </button>
+                    <div class="participant-row">
+                      <span class="participant-email">${email}</span>
+                      <button
+                        type="button"
+                        class="participant-delete-btn"
+                        data-activity="${encodedActivityName}"
+                        data-email="${encodedEmail}"
+                        title="Unregister participant"
+                        aria-label="Unregister participant"
+                      >
+                        <span class="delete-icon" aria-hidden="true">&#128465;</span>
+                      </button>
+                    </div>
                   </li>
                 `;
               })
